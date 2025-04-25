@@ -44,7 +44,7 @@ class Status(models.Model):
 class Type(models.Model):
     name = models.CharField("衣服类别", max_length=20, unique=True)
     image = models.ImageField("图片", max_length=1000, null=True)
-    comments = models.CharField("说明", max_length=50, default="")
+    comments = models.CharField("说明", max_length=50, null=True,blank=True)
 
     def __str__(self):
         return self.name
